@@ -160,3 +160,60 @@ export const blogs = [
       "Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.",
   },
 ];
+
+export const projects = [
+  {
+    id: 1,
+    title: "Finance",
+    category: "Web development",
+    image: project1,
+  },
+  {
+    id: 2,
+    title: "Orizon",
+    category: "Web development",
+    image: project2,
+  },
+  {
+    id: 3,
+    title: "Fundo",
+    category: "Web design",
+    image: project3,
+  },
+  {
+    id: 4,
+    title: "Brawlhalla",
+    category: "Applications",
+    image: project4,
+  },
+  {
+    id: 5,
+    title: "DSM.",
+    category: "Web design",
+    image: project5,
+  },
+  {
+    id: 6,
+    title: "MetaSpark",
+    category: "Web design",
+    image: project6,
+  },
+  {
+    id: 7,
+    title: "Summary",
+    category: "Web development",
+    image: project7,
+  },
+  {
+    id: 8,
+    title: "Task Manager",
+    category: "Applications",
+    image: project8,
+  },
+  {
+    id: 9,
+    title: "Arrival",
+    category: "Web development",
+    image: project9,
+  },
+];
