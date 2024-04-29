@@ -1,7 +1,25 @@
-import React from "react";
+import "./App.css";
 
-const App = () => {
-  return <div>App</div>;
-};
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Aside from "./components/Aside";
+
+function App() {
+  return (
+    <>
+      <Aside />
+      <div className="main-content">
+        <Navbar />
+        <section
+          style={{
+            scrollBehavior: "smooth",
+          }}
+        >
+          <Outlet />
+        </section>
+      </div>
+    </>
+  );
+}
 
 export default App;
