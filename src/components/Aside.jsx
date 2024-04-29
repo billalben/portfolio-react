@@ -6,12 +6,14 @@ import {
   GiPhone,
 } from "react-icons/gi";
 
+import me from "../assets/images/me.jpeg";
+
 const Aside = () => {
   return (
     <aside className="sidebar">
       <div className="sidebar-info">
         <figure className="avatar-box">
-          <img src={"../assets/images/me.jpeg"} alt="Billal Benz" width="80" />
+          <img src={me} alt="Billal Benz" width="80" />
         </figure>
 
         <div className="info-content">
