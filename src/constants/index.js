@@ -109,3 +109,54 @@ export const testimonials = [
       "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of the client.",
   },
 ];
+
+export const blogs = [
+  {
+    title: "Design conferences in 2022",
+    category: "Design",
+    date: "Feb 23, 2022",
+    image: blog1,
+    description:
+      "Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.",
+  },
+  {
+    title: "Best fonts every designer",
+    category: "Design",
+    date: "Feb 23, 2022",
+    image: blog2,
+    description:
+      "Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.",
+  },
+  {
+    title: "Design digest #80",
+    category: "Design",
+    date: "Feb 23, 2022",
+    image: blog3,
+    description:
+      "Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.",
+  },
+  {
+    title: "UI interactions of the week",
+    category: "Design",
+    date: "Feb 23, 2022",
+    image: blog4,
+    description:
+      "Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.",
+  },
+  {
+    title: "The forgotten art of spacing",
+    category: "Design",
+    date: "Feb 23, 2022",
+    image: blog5,
+    description:
+      "Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    title: "Design digest #79",
+    category: "Design",
+    date: "Feb 23, 2022",
+    image: blog6,
+    description:
+      "Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.",
+  },
+];
