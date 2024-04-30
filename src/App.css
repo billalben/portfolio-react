@@ -107,6 +107,7 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
 a {
@@ -834,7 +835,27 @@ main {
 \*-----------------------------------*/
 
 .filter-list {
-  display: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.filter-item button {
+  color: var(--light-gray);
+  font-size: var(--fs-5);
+  transition: var(--transition-1);
+  background-color: var(--onyx);
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.filter-item button:hover {
+  color: var(--light-gray-70);
+}
+
+.filter-item button.active {
+  color: var(--orange-yellow-crayola);
 }
 
 .filter-select-box {
@@ -1640,26 +1661,7 @@ textarea.form-input::-webkit-resizer {
   }
 
   .filter-list {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 25px;
     padding-left: 5px;
-    margin-bottom: 30px;
-  }
-
-  .filter-item button {
-    color: var(--light-gray);
-    font-size: var(--fs-5);
-    transition: var(--transition-1);
-  }
-
-  .filter-item button:hover {
-    color: var(--light-gray-70);
-  }
-
-  .filter-item button.active {
-    color: var(--orange-yellow-crayola);
   }
 
   /* portfolio and blog grid */

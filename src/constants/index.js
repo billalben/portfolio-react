@@ -88,25 +88,25 @@ export const testimonials = [
     name: "Daniel Lewis",
     avatar: avatar1,
     testimonial:
-      "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of the client.",
+      "Billal was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of the client.",
   },
   {
     name: "Jessica Miller",
     avatar: avatar2,
     testimonial:
-      "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of the client.",
+      "Billal was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of the client.",
   },
   {
     name: "Emily Evans",
     avatar: avatar3,
     testimonial:
-      "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of the client.",
+      "Billal was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of the client.",
   },
   {
     name: "Henry William",
     avatar: avatar4,
     testimonial:
-      "Richard was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of the client.",
+      "Billal was hired to create a corporate identity. We were very pleased with the work done. She has a lot of experience and is very concerned about the needs of the client.",
   },
 ];
 
