@@ -7,6 +7,7 @@ import {
   clientList,
   testimonials,
 } from "../../constants/index";
+import Client from "./Client";
 
 const About = () => {
   return (
@@ -52,11 +53,7 @@ const About = () => {
 
         <ul className="clients-list has-scrollbar">
           {clientList.map((client, index) => (
-            <li key={index} className="clients-item">
-              <a href={client.href}>
-                <img src={client.src} alt={client.alt} />
-              </a>
-            </li>
+            <Client key={index} {...client} />
           ))}
         </ul>
       </section>

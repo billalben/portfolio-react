@@ -10,11 +10,7 @@ function App() {
       <Aside />
       <div className="main-content">
         <Navbar />
-        <section
-          style={{
-            scrollBehavior: "smooth",
-          }}
-        >
+        <section>
           <Outlet />
         </section>
       </div>
