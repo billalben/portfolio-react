@@ -5,31 +5,31 @@ const Navbar = () => {
     <nav className="navbar">
       <ul className="navbar-list">
         <li className="navbar-item">
-          <NavLink to="/" className="navbar-link" data-nav-link>
+          <NavLink to="/" className="navbar-link">
             About
           </NavLink>
         </li>
 
         <li className="navbar-item">
-          <NavLink to="/resume" className="navbar-link" data-nav-link>
+          <NavLink to="/resume" className="navbar-link">
             Resume
           </NavLink>
         </li>
 
         <li className="navbar-item">
-          <NavLink to="/portfolio" className="navbar-link" data-nav-link>
+          <NavLink to="/portfolio" className="navbar-link">
             Portfolio
           </NavLink>
         </li>
 
         <li className="navbar-item">
-          <NavLink to="/blogs" className="navbar-link" data-nav-link>
+          <NavLink to="/blogs" className="navbar-link">
             Blog
           </NavLink>
         </li>
 
         <li className="navbar-item">
-          <NavLink to="/contact" className="navbar-link" data-nav-link>
+          <NavLink to="/contact" className="navbar-link">
             Contact
           </NavLink>
         </li>

@@ -392,13 +392,11 @@ main {
   z-index: -1;
 }
 
-.info_more-btn:hover,
-.info_more-btn:focus {
+.info_more-btn:where(:hover, :focus-visible, :focus) {
   background: var(--bg-gradient-yellow-1);
 }
 
-.info_more-btn:hover::before,
-.info_more-btn:focus::before {
+.info_more-btn:where(:hover, :focus-visible, :focus)::before {
   background: var(--bg-gradient-yellow-2);
 }
 
@@ -770,12 +768,13 @@ main {
   content: "";
   position: absolute;
   top: 5px;
-  left: -33px;
-  height: 6px;
-  width: 6px;
+  left: -33.5px;
+  height: 8px;
+  width: 8px;
   background: var(--text-gradient-yellow);
   border-radius: 50%;
-  box-shadow: 0 0 0 4px var(--jet);
+  border: 2px solid var(--jet);
+  background-color: #0b1120;
 }
 
 .timeline-text {
@@ -1516,9 +1515,9 @@ textarea.form-input::-webkit-resizer {
   }
 
   .timeline-item::after {
-    height: 8px;
-    width: 8px;
-    left: -43px;
+    height: 16px;
+    width: 16px;
+    left: -47.5px;
   }
 
   .skills-item:not(:last-child) {

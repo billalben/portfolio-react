@@ -61,7 +61,7 @@ const Blogs = () => {
   };
 
   return (
-    <section className="blog" data-page="blog">
+    <section className="blog">
       <header>
         <h2 className="h2 article-title">Blog</h2>
       </header>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   GiCalendar,
   GiClawSlashes,
@@ -9,8 +10,13 @@ import {
 import me from "../assets/images/me.jpeg";
 
 const Aside = () => {
+  const [showContacts, setShowContacts] = useState(false);
+
+  const toggleContacts = () => {
+    setShowContacts(!showContacts);
+  };
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${showContacts ? "active" : ""}`}>
       <div className="sidebar-info">
         <figure className="avatar-box">
           <img src={me} alt="Billal Benz" width="80" />
@@ -24,8 +30,8 @@ const Aside = () => {
           <p className="title">Front End Developer</p>
         </div>
 
-        <button className="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+        <button className="info_more-btn" onClick={toggleContacts}>
+          <span>Show Contact</span>
 
           <GiClawSlashes />
         </button>
