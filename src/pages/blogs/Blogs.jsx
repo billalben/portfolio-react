@@ -4,16 +4,61 @@ import { blogs } from "../../constants/index";
 import "./blogs.css";
 
 const Blogs = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage] = useState(4); // Number of posts per page
+  const [pageNumber, setPageNumber] = useState(1);
+  const postsPerPage = 4;
 
-  // Get current posts
-  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfLastPost = pageNumber * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = blogs.slice(indexOfFirstPost, indexOfLastPost);
 
-  // Change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => setPageNumber(pageNumber);
+
+  const pageCount = Math.ceil(blogs.length / postsPerPage);
+  const paginationButtons = [];
+
+  for (let i = 1; i <= pageCount; i++) {
+    paginationButtons.push(
+      <li key={i} className={`page-item ${pageNumber === i ? "active" : ""}`}>
+        <button onClick={() => paginate(i)} className="page-link">
+          {i}
+        </button>
+      </li>
+    );
+  }
+
+  const renderPagination = () => {
+    return (
+      <nav>
+        <ul className="pagination">
+          <li className={`page-item ${pageNumber === 1 ? "disabled" : ""}`}>
+            <button
+              onClick={() => paginate(pageNumber - 1)}
+              className="page-link"
+              disabled={pageNumber === 1}
+            >
+              Previous
+            </button>
+          </li>
+
+          {paginationButtons}
+
+          <li
+            className={`page-item ${
+              pageNumber === pageCount ? "disabled" : ""
+            }`}
+          >
+            <button
+              onClick={() => paginate(pageNumber + 1)}
+              className="page-link"
+              disabled={pageNumber === pageCount}
+            >
+              Next
+            </button>
+          </li>
+        </ul>
+      </nav>
+    );
+  };
 
   return (
     <section className="blog" data-page="blog">
@@ -29,51 +74,7 @@ const Blogs = () => {
         </ul>
       </div>
 
-      {/* Pagination */}
-      <nav>
-        <ul className="pagination">
-          <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
-            <button
-              onClick={() => paginate(currentPage - 1)}
-              className="page-link"
-            >
-              Previous
-            </button>
-          </li>
-          {Array.from(
-            { length: Math.ceil(blogs.length / postsPerPage) },
-            (_, index) => (
-              <li
-                key={index}
-                className={`page-item ${
-                  currentPage === index + 1 ? "active" : ""
-                }`}
-              >
-                <button
-                  onClick={() => paginate(index + 1)}
-                  className="page-link"
-                >
-                  {index + 1}
-                </button>
-              </li>
-            )
-          )}
-          <li
-            className={`page-item ${
-              currentPage === Math.ceil(blogs.length / postsPerPage)
-                ? "disabled"
-                : ""
-            }`}
-          >
-            <button
-              onClick={() => paginate(currentPage + 1)}
-              className="page-link"
-            >
-              Next
-            </button>
-          </li>
-        </ul>
-      </nav>
+      {renderPagination()}
     </section>
   );
 };
