@@ -8,35 +8,38 @@ import About from "../pages/about/About";
 import Contact from "../pages/contact/Contact";
 import Error from "../pages/error/Error";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <Error />,
-    children: [
-      {
-        index: true,
-        element: <About />,
-      },
-      {
-        path: "/resume",
-        element: <Resume />,
-      },
-      {
-        path: "/portfolio",
-        element: <Portfolio />,
-      },
-      {
-        path: "blogs",
-        element: <Blogs />,
-      },
-      {
-        path: "contact",
-        element: <Contact />,
-      },
-    ],
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <App />,
+      errorElement: <Error />,
+      children: [
+        {
+          index: true,
+          element: <About />,
+        },
+        {
+          path: "/resume",
+          element: <Resume />,
+        },
+        {
+          path: "/portfolio",
+          element: <Portfolio />,
+        },
+        {
+          path: "/blogs",
+          element: <Blogs />,
+        },
+        {
+          path: "/contact",
+          element: <Contact />,
+        },
+      ],
+    },
+  ],
+  { basename: "/portfolio-react" }
+);
 
 function AppRouter() {
   return <RouterProvider router={router} />;
