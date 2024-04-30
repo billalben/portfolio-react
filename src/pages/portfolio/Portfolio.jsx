@@ -3,8 +3,7 @@ import { FaRegEye } from "react-icons/fa";
 import { projects } from "../../constants";
 
 const Portfolio = () => {
-  // State to store project data and filtered projects
-  const [filteredProjects, setFilteredProjects] = useState([]);
+  const [displayedProjects, setDisplayedProjects] = useState(projects);
 
   // State to store the selected category
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -12,18 +11,17 @@ const Portfolio = () => {
   // Function to handle category filter selection
   const handleFilterClick = (category) => {
     setSelectedCategory(category);
-    if (category === "All") {
-      setFilteredProjects(projects);
-    } else {
-      const filtered = projects.filter(
-        (project) => project.category === category
+
+    if (category === "All") setDisplayedProjects(projects);
+    else {
+      setDisplayedProjects(
+        projects.filter((project) => project.category === category)
       );
-      setFilteredProjects(filtered);
     }
   };
 
   return (
-    <section className="portfolio" data-page="portfolio">
+    <section className="portfolio">
       <header>
         <h2 className="h2 article-title">Portfolio</h2>
       </header>
@@ -36,7 +34,6 @@ const Portfolio = () => {
               <button
                 className={category === selectedCategory ? "active" : ""}
                 onClick={() => handleFilterClick(category)}
-                data-filter-btn
               >
                 {category}
               </button>
@@ -48,19 +45,18 @@ const Portfolio = () => {
       {/* Portfolio items */}
       <section className="projects">
         <ul className="project-list">
-          {filteredProjects.map((project) => (
-            <li
-              className="project-item active"
-              data-filter-item
-              data-category={project.category}
-              key={project.id}
-            >
+          {displayedProjects.map((project) => (
+            <li className="project-item active" key={project.id}>
               <a href="#">
                 <figure className="project-img">
                   <div className="project-item-icon-box">
                     <FaRegEye />
                   </div>
-                  <img src={project.image} alt={project.title} loading="lazy" />
+                  <img
+                    src={project.image}
+                    alt={`Preview of ${project.title}`}
+                    loading="lazy"
+                  />
                 </figure>
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-category">{project.category}</p>
